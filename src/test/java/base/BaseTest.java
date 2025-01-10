@@ -1,7 +1,7 @@
 package base;
 
 import java.io.IOException;
-import java.net.MalformedURLException;
+import java.util.Properties;
 
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -11,13 +11,17 @@ import org.testng.annotations.BeforeSuite;
 
 import driver.AppDriver;
 import driver.AppFactory;
-
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 public class BaseTest {
 
+	protected Properties prop;
 	
 	 @BeforeMethod
-	    public void launchApp() throws MalformedURLException {
+	    public void launchApp() throws FileNotFoundException, IOException {
 	        System.out.println("before method");
+	        prop = new Properties();
+	        prop.load(new FileInputStream("./src/test/resources/propfiles/userdata.properties"));
 	        AppFactory.launchApp();
 	        
 	    }
@@ -25,7 +29,7 @@ public class BaseTest {
 	    @AfterMethod
 	    public void closeApp(ITestResult result) throws IOException {
 	        if(result.getStatus() == ITestResult.FAILURE){
-	            //Util.getScreenshot(result.getTestName());
+	            Util.getScreenshot(result.getMethod().getMethodName());
 	        }
 	        AppDriver.getCurrentDriver().quit();
 	        
