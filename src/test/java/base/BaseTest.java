@@ -39,12 +39,12 @@ public class BaseTest {
 	    public void serverStart(){
 	        System.out.println("before suite");
 	        if(AppData.isCloud.contains("false")){
-	            //AppiumServer.start();
+	           // AppiumServer.start();
 	        }
 	    }
 
 	    @AfterSuite
 	    public void serverStop(){
-	        //AppiumServer.stop();
+	       // AppiumServer.stop();
 	    }
 }

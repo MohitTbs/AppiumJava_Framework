@@ -34,7 +34,7 @@ public class AppFactory {
                     //.setPlatformVersion("13.0")
                     .setAppPackage("com.swaglabsmobileapp")
                     .setAppActivity("com.swaglabsmobileapp.MainActivity");
-            driver = new AndroidDriver(new URL("http://127.0.0.1:4724/"), options);
+            driver = new AndroidDriver(new URL("http://127.0.0.1:4725/"), options);
 
         }else { //browserstack
             /*options.setDeviceName("Google Pixel 6")

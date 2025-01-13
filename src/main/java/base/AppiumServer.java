@@ -14,7 +14,7 @@ public class AppiumServer {
         builder
                 //.withAppiumJS(new File("/Users/skpatro/.nvm/versions/node/v18.16.0/lib/node_modules/appium/build/lib/main.js"))
                 //.usingDriverExecutable(new File("/Users/skpatro/.nvm/versions/node/v18.16.0/bin/node"))
-                .usingPort(4723)
+                .usingPort(4725)
                 .withArgument(GeneralServerFlag.LOCAL_TIMEZONE)
                 .withLogFile(new File("Appiumlog.txt"))
                 .withIPAddress("127.0.0.1");

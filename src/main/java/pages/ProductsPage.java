@@ -24,7 +24,7 @@ public class ProductsPage extends BaseClass {
 	By productPrice;
 	By addToCartButton;
 	By trolleyIcon;
-	
+
 
 	public ProductsPage() {
 
@@ -38,6 +38,7 @@ public class ProductsPage extends BaseClass {
 			productPrice = By.xpath("//android.widget.TextView[@content-desc='test-Price']");
 			addToCartButton = By.xpath("//android.widget.TextView[@text='ADD TO CART']");
 			trolleyIcon = By.xpath("//android.view.ViewGroup[@content-desc='test-Cart']");
+			
 
 		} else if (AppDriver.getCurrentDriver() instanceof IOSDriver) {
 
@@ -73,5 +74,6 @@ public class ProductsPage extends BaseClass {
 		
 		getEl(trolleyIcon).click();
 	}
+
 
 }
