@@ -23,12 +23,12 @@ public class DrawingTest extends BaseTest{
 		productsPage = new ProductsPage();
 		loginPage.login("standard_user", "secret_sauce");
 		productsPage.clickOnMenuBtn();
-//		Thread.sleep(2000);
 		menuPage = new MenuPage();
 		menuPage.clickOnDrawingBtn();
 		Thread.sleep(2000);
 		drawingPage = new DrawingPage();
 		Util.Drawing(drawingPage.getSignaturePadElement());
+		drawingPage.Drawing(drawingPage.getSignaturePadElement());
 		Thread.sleep(5000);
 		
 	}
