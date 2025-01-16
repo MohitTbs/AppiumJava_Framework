@@ -40,7 +40,7 @@ public class TotalAmountTest extends BaseTest {
 		checkoutInfoPage.clickOnContinueBtn();
 		checkoutOverviewPage = new CheckoutOverviewPage();
 		String[] arr = checkoutOverviewPage.getTotalAmount();
-		Assert.assertTrue((Double.parseDouble(arr[0]) + Double.parseDouble(arr[1])) != Double.parseDouble(arr[2]));
+		Assert.assertTrue((Double.parseDouble(arr[0]) + Double.parseDouble(arr[1])) == Double.parseDouble(arr[2]));
 
 	}
 }

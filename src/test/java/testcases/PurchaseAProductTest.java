@@ -45,8 +45,5 @@ public class PurchaseAProductTest extends BaseTest{
 		checkoutCompletePage = new CheckoutCompletePage();
 		Assert.assertTrue(checkoutCompletePage.isOrderComplete());
 		
-//		Assert.assertEquals(prodDetail.get(0), yourCartPage.getProductName());
-//		Assert.assertEquals(prodDetail.get(1), yourCartPage.getProductPrice());
-
 	}
 }
